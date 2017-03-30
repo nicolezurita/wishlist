@@ -1,0 +1,13 @@
+<!DOCTYPE>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <h1>Hello, {{request.session.user_name}}!</h1>
+        <form action="{%url 'login_stuff:my_logout' %}"  method='post'>
+            {% csrf_token %}
+            <input type="submit" name="logout" value="Logout">
+        </form>
+    </body>
+</html>
